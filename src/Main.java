@@ -17,20 +17,18 @@ public class Main {
     }
 
 
-    public static String clientDeviceYearIos(int os, int currentYear) {
-        if (os == 0 || currentYear <= 2015) {
-            return " Установите облегченную версию приложения для iOS по ссылке";
-        } else {
-            return "Установите версию приложения для IOS по ссылке";
+    public static String clientDeviceYear(int os, int currentYear) {
+        if (os == 0 && currentYear <= 2015) {
+            System.out.println("Установите блегченную версию приложения для iOS по ссылке");
+        } else if (os == 0) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
         }
-    }
-
-    public static String clientDeviceYearAndroid(int os, int currentYear) {
-        if (os == 1 || currentYear <= 2015) {
-            return " Установите облегченную версию приложения для Android по ссылке";
-        } else {
-            return "Установите версию приложения для Android по ссылке";
+        if (os == 1 && currentYear <= 2015) {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        } else if (os == 1) {
+            System.out.println("Установите версию приложения для Android по ссылке");
         }
+        return "";
     }
 
     public static String deliveryDistance(int km) {
@@ -56,13 +54,9 @@ public class Main {
         System.out.println("Task№2");
         enter();
         int os = 0;
-        int currentYear = 2020;
+        int currentYear = 2014;
 //        int currentYear = LocalDate.now().getYear();
-        if (os == 1) {
-            System.out.println(clientDeviceYearIos(os, currentYear));
-        } else {
-            System.out.println(clientDeviceYearAndroid(os, currentYear));
-        }
+        System.out.println(clientDeviceYear(os, currentYear));
         printSeparator();
         enter();
 
