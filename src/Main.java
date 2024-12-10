@@ -33,12 +33,13 @@ public class Main {
 
     public static String deliveryDistance(int km) {
         if (km < 20) {
-            System.out.println("Потребуется дней: " + 1);
+            return ("Потребуется дней: " + 1);
         } else if (km > 20 && km < 60) {
-            System.out.println("Потребуется дней: " + 2);
+            return ("Потребуется дней: " + 2);
         } else if (km > 60 && km < 100) {
-            System.out.println("Потребуется дней: " + 3);
+            return ("Потребуется дней: " + 3);
         } else System.out.println("Доставки нет");
+
         return "";
     }
 
